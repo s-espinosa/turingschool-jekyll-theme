@@ -1,0 +1,17 @@
+<nav class="navigation">
+  <section class="navigation-logo">
+    <!-- <a href='/'><img src="https://www.turing.io/sites/default/files/turing-logo_1_0.png"
+                     alt="Turing School of Software and Design"
+                     class="turing-logo">
+    </a> -->
+  </section>
+  <div class="navigation-links" >
+    <ul>
+      {% for doc in site.docs %}
+        {% if doc.category == "index" %}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
